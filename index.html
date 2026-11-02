@@ -50,7 +50,13 @@ header{position:sticky;top:0;z-index:5;background:#080b13ed;border-bottom:1px so
 </div>
 <footer><div class="wrap">© 2026 GAMEVERSE — protótipo de desenvolvimento. Marcas e jogos reais pertencem aos respectivos titulares.</div></footer>
 <script>
-const defaults=[
+const SUPABASE_URL = "COLE_AQUI_A_PROJECT_URL";
+const SUPABASE_KEY = "COLE_AQUI_A_PUBLISHABLE_KEY";
+
+const sb = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);const defaults=[
 {name:"Neon Frontier",platform:"PC",genre:"Ação / Aventura",emoji:"🚀",bg:"linear-gradient(135deg,#142d55,#6d35a5)",access:"Streaming + Download"},
 {name:"Shadow Circuit",platform:"PlayStation",genre:"Corrida",emoji:"🏎️",bg:"linear-gradient(135deg,#541b3d,#d15b54)",access:"Download"},
 {name:"Wild Kingdom",platform:"Xbox",genre:"Aventura",emoji:"🐉",bg:"linear-gradient(135deg,#164b3e,#82a84d)",access:"Streaming"},
